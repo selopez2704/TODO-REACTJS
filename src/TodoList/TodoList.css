@@ -4,9 +4,16 @@ ul {
     list-style: none;
 }
 .TodoList{
+
   margin-top: -15px;
   border-radius: 15px;
   background-color: #ffffff;
   padding: 10px;
+  margin-bottom: 100px;
   /* max-width: 70%; */
+}
+.TodoList>ul>p{
+  text-align: center;
+  font-weight:500;
+  font-size: 24px;
 }

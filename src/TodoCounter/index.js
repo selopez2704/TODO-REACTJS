@@ -28,7 +28,7 @@ function TodoCounter() {
                     </div>
                 </aside>
             </div>
-            <div className='TodoCounter-text'>TODO list created with REACT Js</div>
+            <div className='TodoCounter-text'>TODO list created with React JS</div>
             <div className='TodoCounter-container'>
                 <div className='container-completed'>
                     <div className='Icon-completed'>
