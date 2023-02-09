@@ -1,13 +1,13 @@
 {
-  "main.css": "/selopez2704/TODO-REACTJS-V01/static/css/main.26092637.chunk.css",
-  "main.js": "/selopez2704/TODO-REACTJS-V01/static/js/main.ea32cb0e.chunk.js",
-  "main.js.map": "/selopez2704/TODO-REACTJS-V01/static/js/main.ea32cb0e.chunk.js.map",
-  "static/js/1.1dee63bc.chunk.js": "/selopez2704/TODO-REACTJS-V01/static/js/1.1dee63bc.chunk.js",
-  "static/js/1.1dee63bc.chunk.js.map": "/selopez2704/TODO-REACTJS-V01/static/js/1.1dee63bc.chunk.js.map",
-  "runtime~main.js": "/selopez2704/TODO-REACTJS-V01/static/js/runtime~main.2b9e4028.js",
-  "runtime~main.js.map": "/selopez2704/TODO-REACTJS-V01/static/js/runtime~main.2b9e4028.js.map",
-  "static/css/main.26092637.chunk.css.map": "/selopez2704/TODO-REACTJS-V01/static/css/main.26092637.chunk.css.map",
-  "index.html": "/selopez2704/TODO-REACTJS-V01/index.html",
-  "precache-manifest.0dee160e299f4342db6e5b9153dfd473.js": "/selopez2704/TODO-REACTJS-V01/precache-manifest.0dee160e299f4342db6e5b9153dfd473.js",
-  "service-worker.js": "/selopez2704/TODO-REACTJS-V01/service-worker.js"
+  "main.css": "/static/css/main.bac1187a.chunk.css",
+  "main.js": "/static/js/main.c5de5661.chunk.js",
+  "main.js.map": "/static/js/main.c5de5661.chunk.js.map",
+  "static/js/1.1dee63bc.chunk.js": "/static/js/1.1dee63bc.chunk.js",
+  "static/js/1.1dee63bc.chunk.js.map": "/static/js/1.1dee63bc.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/css/main.bac1187a.chunk.css.map": "/static/css/main.bac1187a.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.6d6e80b62c10a8f58fd42ecb1dcf68c5.js": "/precache-manifest.6d6e80b62c10a8f58fd42ecb1dcf68c5.js",
+  "service-worker.js": "/service-worker.js"
 }
