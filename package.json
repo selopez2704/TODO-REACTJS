@@ -40,5 +40,6 @@
   "devDependencies": {
     "gh-pages": "^5.0.0"
   },
-  "homepage":"https://github.com/selopez2704/TODO-REACTJS-V01"
+  "homepage":"https://github.com/selopez2704/TODO-REACTJS-V01/tree/gh-pages"
+  // "homepage":"https://github.com/selopez2704/TODO-REACTJS-V01"
 }
