@@ -1,0 +1,54 @@
+.LoadingTodo-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5 50 rgba(32,35,41,0.15);
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 15px;
+}.LoadingTodo-text{
+    margin: 24px 0px 24px 24px;
+    width: cal(100% -120px);
+    font-size: 18px;
+    color: rgb(149, 149, 149);
+    line-height: 24px;
+    font-weight: 400;
+}
+.LoadingTodo-completeIcon,
+.LoadingTodo-deleteIcon{
+    border-radius:50px;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+}
+.LoadingTodo-completeIcon{
+    left: 12px;
+    background:linear-gradient(90deg , #dededef7, #d2d2d2f7);
+    background-size: 400% 400%;
+    animation:loadingAnimation 3s ease-in-out infinite;
+}
+.LoadingTodo-deleteIcon{
+    right: 10px;
+    background:linear-gradient(90deg , #dededef7, #d2d2d2f7);
+    background-size: 400% 400%;
+    animation:loadingAnimation 3s ease-in-out infinite;
+}
+
+.LoadingTodo-container{
+    background:linear-gradient(90deg , #e4e4e4f7, #dededef7);
+    background-size: 400% 400%;
+    animation:loadingAnimation 5s ease-in-out infinite;
+}
+
+@keyframes loadingAnimation{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 50% 100%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
