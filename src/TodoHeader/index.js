@@ -5,7 +5,7 @@ function TodoHeader({children}) {
         <header>
             {children}
         </header>
-        )
+    )
 }
 
 export{
