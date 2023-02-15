@@ -9,7 +9,10 @@ function TodoForm() {
 
     const {createTodo,setOpenModal}=React.useContext(TodoContext);
 
-    const onChangeTextArea=(event)=>{
+    const onChangeInput=(event)=>{
+        if (event.keyCode === 13 && newTodoValue.trim() !== '') {
+            onSubmit(event);
+        }
         setNewTodoValue(event.target.value);
     }
 
@@ -17,18 +20,19 @@ function TodoForm() {
         setOpenModal(prevState=>!prevState);
     }
     const onSubmit=(event)=>{
-        event.preventDefault();
-        createTodo(newTodoValue);
-        setOpenModal(prevState=>!prevState);
-
+        if (newTodoValue.trim()!=='') {
+            event.preventDefault();
+            createTodo(newTodoValue);
+            setOpenModal(prevState=>!prevState);
+        }
     }
 
     return(
         <form onSubmit={onSubmit}>
             <label>Type a new TODO</label>
-            <textarea 
+            <input className='formInput' 
                 // value={newTodoValue}
-                onChange={onChangeTextArea}
+                onKeyUp={onChangeInput}
                 placeholder="Type here..."
             />
             <div className='TodoForm-buttonContainer'>
