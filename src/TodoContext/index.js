@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocalStorage } from "./useLocalStorage";
+import uuid from 'react-uuid';
 
 const TodoContext = React.createContext();
 
@@ -27,8 +28,9 @@ function TodoProvider(props) {
     
     
     const createTodo=(text)=>{
+      const id=uuid();
       const newTodos=[...todos];
-      newTodos.push({text:text,complete:false})
+      newTodos.push({id:id,text:text,complete:false})
       saveTodos(newTodos);
     }
     const completeTodo=(text)=>{

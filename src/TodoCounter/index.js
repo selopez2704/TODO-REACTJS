@@ -4,8 +4,7 @@ import { TodoContext } from '../TodoContext';
 
 
 
-function TodoCounter() {
-    const { totalTodos: total, completedTodos: completed } = React.useContext(TodoContext);
+function TodoCounter({totalTodos,completedTodos}) {
     return (
 
 
@@ -32,13 +31,13 @@ function TodoCounter() {
             <div className='TodoCounter-container'>
                 <div className='container-completed'>
                     <div className='Icon-completed'>
-                        {completed}
+                        {completedTodos}
                     </div>
                     <div className='counter-text'>Done</div>
                 </div>
                 <div className='container-total'>
                     <div className='Icon-total'>
-                        {total}
+                        {totalTodos}
                     </div>
                     <div className='counter-text'>Total</div>
                 </div>
