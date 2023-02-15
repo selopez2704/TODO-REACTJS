@@ -14,7 +14,7 @@ function TodoSearch({setSearchValue}){
             className='TodoSearch' 
             placeholder='What are you looking for?'
             onChange={onSearchValueChange}
-            />
+        />
     )
 }
 
