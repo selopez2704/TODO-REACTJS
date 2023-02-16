@@ -1,16 +1,13 @@
 import './TodoForm.css'
 import React from "react";
-import { TodoContext } from "../TodoContext";
 
 
-function TodoForm() {
+function TodoForm({createTodo,setOpenModal}) {
 
     const [newTodoValue, setNewTodoValue] = React.useState('');
 
-    const {createTodo,setOpenModal}=React.useContext(TodoContext);
-
     const onChangeInput=(event)=>{
-        if (event.keyCode === 13 && event.target.value > 0) {
+        if (event.keyCode === 13 && newTodoValue.trim()!=='') {
             onSubmit(event);
         }
         setNewTodoValue(event.target.value);
@@ -20,9 +17,11 @@ function TodoForm() {
         setOpenModal(prevState=>!prevState);
     }
     const onSubmit=(event)=>{
-        event.preventDefault();
-        createTodo(newTodoValue);
-        setOpenModal(prevState=>!prevState);
+        if (newTodoValue.trim()!=='') {
+            event.preventDefault();
+            createTodo(newTodoValue);
+            setOpenModal(prevState=>!prevState);
+        }
     }
     return(
         <form onSubmit={onSubmit}>
