@@ -44,8 +44,6 @@ function useTodos() {
     newTodos.splice(todoindex, 1);
     saveTodos(newTodos);
   }
-
-
   return(
     {
       loading,

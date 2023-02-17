@@ -1,0 +1,42 @@
+.Empty-grandParent-Container{
+    display: flex;
+    justify-content: center;
+
+}
+.Empty-Container{
+    width: 80%;
+    margin-top: 24px;
+    background-color: white;
+    border-radius: 15px;
+    display:grid;
+    grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3];
+	grid-template-rows: [y0] 2fr [y1] 1fr [y2] ;
+    justify-content: center;
+}
+.Empty-Icon{
+    grid-column: x1 / x2;
+	grid-row: y0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #341046;
+    margin-top: 24px;
+    text-align: center;
+    background-color: white;
+    width: 150px;
+    margin: 24px auto auto auto;
+    height: 150px;
+    border-radius:50% ;
+}
+/* .NotMatches-Icon>i{
+    margin-top: -24px;
+    margin-left: -24px;
+} */
+
+.Empty-Text{
+    grid-column: x0 / x3;
+	grid-row: y1;
+    /* color: white; */
+    text-align: center ;
+    font-weight:700;
+}

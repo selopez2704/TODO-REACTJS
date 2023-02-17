@@ -25,7 +25,7 @@ function useLocalStorage(itemName,initialValue) {
           setError(error);
         }
       },1000);
-    });
+    },[]);
     
     const saveItem =(newItem)=>{
       try {
@@ -35,7 +35,6 @@ function useLocalStorage(itemName,initialValue) {
       } catch (error) {
         setError(error);
       }
-      
     }
     return{item,saveItem,loading,errorState};
 }
