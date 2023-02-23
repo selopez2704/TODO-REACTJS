@@ -4,6 +4,9 @@
   margin: 0;
   padding: 48px;
 }
+.TodoCounter-grandContainer--loading{
+  opacity: 50%;
+}
 .TodoCounter-grandContainer{
   border-radius:15px;
   background-color: white;

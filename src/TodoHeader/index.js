@@ -1,9 +1,13 @@
 import React from 'react';
 
-function TodoHeader({children}) {
+function TodoHeader({children,loading}) {
+    console.log(React.Children.toArray(children))
     return(
         <header>
-            {children}
+            {
+                React.Children.toArray(children)
+                    .map(child=>React.cloneElement(child,{loading:loading}))
+            } 
         </header>
     )
 }

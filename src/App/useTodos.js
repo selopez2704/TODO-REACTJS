@@ -5,7 +5,7 @@ import uuid from 'react-uuid';
 
 function useTodos() {
 
-  const { item: todos, saveItem: saveTodos, loading, errorState: error } = useLocalStorage('TODOS_V1', []);
+  const { item: todos, saveItem: saveTodos, loading, errorState: error, sincronizeItem:sincronizeTodos} = useLocalStorage('TODOS_V1', []);
 
   const [openModal, setOpenModal] = React.useState(false);
 
@@ -24,7 +24,6 @@ function useTodos() {
       return todoText.includes(searchText);
     });
   }
-
 
   const createTodo = (text) => {
     const id = uuid();
@@ -58,6 +57,7 @@ function useTodos() {
       deleteTodo,
       openModal,
       setOpenModal,
+      sincronizeTodos
     }
   )
 }

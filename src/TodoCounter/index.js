@@ -3,11 +3,11 @@ import './TodoCounter.css'
 
 
 
-function TodoCounter({totalTodos,completedTodos}) {
+function TodoCounter({totalTodos,completedTodos,loading}) {
     return (
 
 
-        <div className='TodoCounter-grandContainer'>
+        <div className={`TodoCounter-grandContainer ${!!loading && "TodoCounter-grandContainer--loading"}`}>
             <div>
                 <aside className="responsive-banner first">
                     <div className="container-envelope">

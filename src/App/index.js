@@ -15,6 +15,7 @@ import { TodosLoading } from "../TodosLoading";
 import { EmptyTodos } from "../EmptyTodos";
 import { useTodos } from "./useTodos";
 import { EmptySearchResults } from "../EmptySearchResults";
+import { ChangeAlertWithStorageListener } from "../ChangeAlert";
 
 function App() {
   const {
@@ -30,11 +31,12 @@ function App() {
     deleteTodo,
     openModal,
     setOpenModal,
+    sincronizeTodos
   } = useTodos();
 
   return (
     <>
-      <TodoHeader>
+      <TodoHeader loading={loading}>
         <TodoCounter
           totalTodos={totalTodos}
           completedTodos={completedTodos}
@@ -44,16 +46,16 @@ function App() {
         />
       </TodoHeader>
 
-      <TodoList 
+      <TodoList
         error={error}
         loading={loading}
         searchedTodos={searchedTodos}
         searchValue={searchValue}
 
-        onError={()=><TodosError />}
-        onLoading={()=><TodosLoading />}
-        onEmptyTodos={()=><EmptyTodos />}
-        onEmptySearchResults={()=><EmptySearchResults searchValue={searchValue} />}
+        onError={() => <TodosError />}
+        onLoading={() => <TodosLoading />}
+        onEmptyTodos={() => <EmptyTodos />}
+        onEmptySearchResults={() => <EmptySearchResults searchValue={searchValue} />}
         render={todo => (
           <TodoItem
             key={todo.id}
@@ -74,6 +76,9 @@ function App() {
       )}
       <CreateTodoButton
         setOpenModal={setOpenModal}
+      />
+      <ChangeAlertWithStorageListener
+        sincronize={sincronizeTodos}
       />
     </>
 
