@@ -1,7 +1,4 @@
-// import './App.css';
 import React from 'react';
-// import { AppUI } from './AppUI';
-// import { TodoProvider } from '../TodoContext';
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
 import { TodoHeader } from '../TodoHeader';
@@ -33,7 +30,6 @@ function App() {
     setOpenModal,
     sincronizeTodos
   } = useTodos();
-
   return (
     <>
       <TodoHeader loading={loading}>
@@ -51,9 +47,9 @@ function App() {
         loading={loading}
         searchedTodos={searchedTodos}
         searchValue={searchValue}
-
+        
         onError={() => <TodosError />}
-        onLoading={() => <TodosLoading />}
+        onLoading={() => <TodosLoading searchedTodos={searchedTodos}/>}
         onEmptyTodos={() => <EmptyTodos />}
         onEmptySearchResults={() => <EmptySearchResults searchValue={searchValue} />}
         render={todo => (
@@ -63,7 +59,7 @@ function App() {
             completed={todo.completed}
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
-          />
+            />
         )}
       />
       {!!openModal && (

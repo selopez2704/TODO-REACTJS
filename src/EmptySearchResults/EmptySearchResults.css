@@ -36,7 +36,6 @@
 .NoMatches-Text{
     grid-column: x0 / x3;
 	grid-row: y1;
-    /* color: white; */
     text-align: center ;
     font-weight: 700;
 }

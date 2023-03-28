@@ -28,15 +28,10 @@
     height: 150px;
     border-radius:50% ;
 }
-/* .NotMatches-Icon>i{
-    margin-top: -24px;
-    margin-left: -24px;
-} */
 
 .Empty-Text{
     grid-column: x0 / x3;
 	grid-row: y1;
-    /* color: white; */
     text-align: center ;
     font-weight:700;
 }

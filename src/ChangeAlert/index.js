@@ -1,22 +1,21 @@
 import './ChangeAlert.css'
 import React from "react";
 import { withStorageListener } from './withStorageListener';
+import { SimpleSnackbar } from '../ChangeAlert/SimpleSnackbar';
 
-function ChangeAlert({show,toggleShow,}) {
+
+function ChangeAlert({ show, toggleShow, }) {
     if (show) {
-        return(
-            <div className='ChangeAlert'>
-                <p>Changes occurred</p> 
-                <button onClick={()=>toggleShow(false)}>Reload info</button>
-            </div>
+        return (
+            <SimpleSnackbar toggleShow={toggleShow} />
         )
-    }else{
-        
+    } else {
+
     }
 }
 
-const ChangeAlertWithStorageListener=withStorageListener(ChangeAlert);
+const ChangeAlertWithStorageListener = withStorageListener(ChangeAlert);
 
-export{
+export {
     ChangeAlertWithStorageListener
 }

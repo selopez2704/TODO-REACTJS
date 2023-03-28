@@ -1,7 +1,8 @@
 import React from 'react';
 import './TodosLoading.css'
 
-function TodosLoading(){
+function TodosLoading({searchedTodos}){
+    
     return(
         <>
             <div className='LoadingTodo-container'>
