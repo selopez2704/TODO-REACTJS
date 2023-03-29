@@ -24,6 +24,7 @@
   .CreateTodoButton:hover {
     transform: rotate(225deg);
   }
+  
   /* button[title]:hover::after {
     transform: rotate(-224deg);
     content: attr(title);

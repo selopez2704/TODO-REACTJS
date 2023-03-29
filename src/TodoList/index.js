@@ -7,9 +7,11 @@ import './TodoList.css'
 function TodoList(props){
     return(
         <section className='TodoList'>
-            <ul>
-                {props.children}
-            </ul>
+            {props.error && props.onError()}
+            {props.loading && props.onLoading()}
+            {(!props.loading && !props.searchedTodos.length && !props.searchValue) && props.onEmptyTodos()}
+            {(!props.loading && !props.searchedTodos.length && props.searchValue) && props.onEmptySearchResults()}
+            {(!props.loading && !props.error) && props.searchedTodos.map(props.render)}
         </section>
     )
 }

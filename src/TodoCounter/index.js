@@ -1,15 +1,13 @@
 import React from 'react';
 import './TodoCounter.css'
-import { TodoContext } from '../TodoContext';
 
 
 
-function TodoCounter() {
-    const { totalTodos: total, completedTodos: completed } = React.useContext(TodoContext);
+function TodoCounter({totalTodos,completedTodos,loading}) {
     return (
 
 
-        <div className='TodoCounter-grandContainer'>
+        <div className={`TodoCounter-grandContainer ${!!loading && "TodoCounter-grandContainer--loading"}`}>
             <div>
                 <aside className="responsive-banner first">
                     <div className="container-envelope">
@@ -32,13 +30,13 @@ function TodoCounter() {
             <div className='TodoCounter-container'>
                 <div className='container-completed'>
                     <div className='Icon-completed'>
-                        {completed}
+                        {completedTodos}
                     </div>
                     <div className='counter-text'>Done</div>
                 </div>
                 <div className='container-total'>
                     <div className='Icon-total'>
-                        {total}
+                        {totalTodos}
                     </div>
                     <div className='counter-text'>Total</div>
                 </div>

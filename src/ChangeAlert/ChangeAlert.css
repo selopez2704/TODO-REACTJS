@@ -1,0 +1,9 @@
+.ChangeAlert{
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    position: grid;
+    top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}

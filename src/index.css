@@ -30,7 +30,6 @@ h2{
   margin: 0 30px;
   position: relative;
   margin: auto;
-  /* min-height: 100vh; */
   max-width: 80%;
   min-width: 60%;
 }
